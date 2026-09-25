@@ -1,418 +1,159 @@
-# 🏏 IPL Ball-by-Ball Data Analysis & Interactive Dashboard
+# 🏏 IPL Ball-by-Ball Data Analytics & Interactive Dashboard
 
-## IBM Internship Data Analytics Project
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.56%2B-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-3F4F75?logo=plotly&logoColor=white)](https://plotly.com/)
+[![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![Project](https://img.shields.io/badge/IBM%20Internship-Data%20Analytics-052FAD?logo=ibm&logoColor=white)](https://www.ibm.com/)
 
-A complete Python-based data analytics project that analyzes IPL
-ball-by-ball cricket data and presents the results through an
-interactive Streamlit dashboard.
+A comprehensive, end-to-end Python data analytics project that cleans, models, and visualizes IPL delivery-level cricket data through an interactive, executive-grade Streamlit analytics dashboard.
 
-The project covers data cleaning, feature engineering, exploratory data
-analysis, KPI development, team analysis, batting analysis, bowling
-analysis, scoring trends, extras, dismissals, innings-score
-distribution, and filtered ball-by-ball exploration.
-
-------------------------------------------------------------------------
+---
 
 ## 📌 Project Overview
 
-The objective of this project is to convert raw IPL delivery-level data
-into meaningful analytical insights using Python.
+This project transforms raw delivery-level IPL data into actionable cricket performance insights using Python. It follows a structured end-to-end data analytics pipeline:
 
-The project follows an end-to-end analytics workflow:
+$$\text{Raw Dataset} \longrightarrow \text{Data Cleaning} \longrightarrow \text{Feature Engineering} \longrightarrow \text{EDA} \longrightarrow \text{Interactive Dashboard}$$
 
-**Raw Dataset → Data Cleaning → Feature Engineering → EDA → Aggregation
-→ Visualization → Interactive Dashboard**
+### Key Highlights:
+- **Interactive Web Dashboard:** Real-time filtering by Batting Team and Innings ID with instant KPI calculations and dynamic charts.
+- **Executive Styling:** Polished dark-slate aesthetic with customized KPI metrics, smooth hover micro-animations, and unified Plotly visualizations.
+- **Delivery-Level Exploration:** In-depth breakdown of dot balls, boundaries (4s & 6s), dismissal types, extra runs, and over-by-over run rates.
+- **Comprehensive Project Documentation:** Includes full Jupyter notebook analysis and an official project report document.
 
-The final solution contains:
+> 📝 **Dataset Note:** The official dataset records entities via numeric IDs (`Team_Batting_Id`, `Striker_Id`, `Bowler_Id`, etc.). To maintain data integrity without unverified third-party assumptions, analyses are displayed using verified dataset IDs.
 
--   A Jupyter Notebook with the complete analysis
--   A Streamlit dashboard
--   A professional project report
--   The original ball-by-ball dataset
-
-> **Dataset note:** The supplied dataset contains numeric team and
-> player IDs rather than readable team/player names. The project
-> therefore uses the available IDs directly instead of introducing
-> unverified name mappings.
-
-------------------------------------------------------------------------
-
-## 🎯 Project Objectives
-
--   Load and understand the IPL ball-by-ball dataset.
--   Clean and preprocess the raw data.
--   Handle missing and inconsistent values.
--   Create analytical features such as total runs, dot balls, fours,
-    sixes, and wickets.
--   Analyze team batting performance.
--   Analyze individual batting performance using striker IDs.
--   Analyze bowling performance using bowler IDs.
--   Study run-rate progression across overs.
--   Analyze extra runs by extra type.
--   Analyze dismissal types.
--   Study the distribution of innings scores.
--   Build an interactive Streamlit dashboard.
--   Provide a reproducible Python notebook for the complete workflow.
-
-------------------------------------------------------------------------
-
-## 📊 Dashboard KPIs
-
-The dashboard provides the following high-level KPIs:
-
-  KPI              Value
-  ------------ ---------
-  Matches            577
-  Total Runs     173,965
-  Wickets          5,532
-  Fours           15,413
-  Sixes            5,813
-  Dot Balls       49,915
-
-These values are displayed directly in the project dashboard.
-
-------------------------------------------------------------------------
-
-## 📈 Dashboard Features
-
-### 1. Team Performance Overview
-
-Provides:
-
--   Total runs by batting team ID
--   Run rate by batting team ID
--   Team-level comparison
-
-### 2. Top Batting Performers
-
-Displays:
-
--   Top 15 striker IDs by runs scored
--   Comparative batting performance
-
-### 3. Bowling Performance
-
-Displays:
-
--   Top bowlers by recorded wickets
--   Economy comparison
--   Qualification threshold of at least 60 recorded balls for the
-    economy comparison
-
-### 4. Scoring Trends by Over
-
-Shows:
-
--   Run-rate progression across over numbers
--   Changes in scoring intensity throughout an innings
-
-### 5. Extras & Dismissals
-
-Analyzes:
-
--   Wides
--   Leg byes
--   Byes
--   No-balls
--   Penalties
--   Caught
--   Bowled
--   Run out
--   LBW
--   Stumped
--   Caught and bowled
--   Retired hurt
--   Hit wicket
--   Obstructing the field
-
-### 6. Innings Score Distribution
-
-Shows the distribution of innings totals using a histogram.
-
-### 7. Filtered Ball-by-Ball Data
-
-Provides detailed delivery-level information including:
-
--   Match ID
--   Innings ID
--   Over ID
--   Ball ID
--   Batting team ID
--   Bowling team ID
--   Striker ID
--   Bowler ID
--   Batsman runs
--   Extra type
--   Extra runs
--   Total runs
--   Dismissal type
-
-------------------------------------------------------------------------
-
-## 🛠️ Technology Stack
-
-  Technology         Purpose
-  ------------------ ----------------------------------------
-  Python             Core programming and analysis
-  Pandas             Data loading, cleaning and aggregation
-  NumPy              Numerical calculations
-  Matplotlib         Static visualization
-  Plotly             Interactive charts
-  Streamlit          Interactive dashboard
-  Jupyter Notebook   Analysis documentation
-
-------------------------------------------------------------------------
+---
 
 ## 📂 Project Structure
 
-``` text
+```text
 IPL_Ball_by_Ball_IBM_Project/
 │
-├── Ball_by_Ball.csv
-│
-├── IPL_Ball_by_Ball_IBM_Project.ipynb
-│
-├── app.py
-│
-├── IPL_IBM_Project_Report_Exact_Dashboard_Screenshots.docx
-│
-└── README.md
+├── .gitignore                                       # Specifies files and folders untracked by Git
+├── Ball_by_Ball.csv                                 # Official IPL ball-by-ball delivery-level dataset
+├── Harshavardhn_Patil_IPL_IBM_ProjectReport.docx   # Official IBM Internship project report with documentation
+├── IPL_Ball_by_Ball_IBM_Project.ipynb              # Jupyter Notebook with end-to-end data exploration & EDA
+├── README.md                                        # Complete project documentation and run instructions
+├── app.py                                           # Streamlit interactive analytics web application
+├── requirements.txt                                 # List of project dependencies for one-command install
+└── run.bat                                          # One-click Windows batch launcher for setup and execution
 ```
 
-### File Description
+### File Details:
 
-**`Ball_by_Ball.csv`**
+| File Name | Description |
+|---|---|
+| **`app.py`** | Main application script hosting the interactive Streamlit dashboard, custom KPI cards, and Plotly charts. |
+| **`Ball_by_Ball.csv`** | Raw delivery-by-delivery dataset covering match deliveries, runs, extras, and wickets across IPL matches. |
+| **`Harshavardhn_Patil_IPL_IBM_ProjectReport.docx`** | Detailed academic/internship project report with executive summary, methodology, and dashboard visuals. |
+| **`IPL_Ball_by_Ball_IBM_Project.ipynb`** | Step-by-step Jupyter Notebook detailing exploratory data analysis, data pre-processing, and aggregations. |
+| **`requirements.txt`** | Dependency manifest specifying library packages (`streamlit`, `pandas`, `numpy`, `plotly`). |
+| **`run.bat`** | Windows automation script to install dependencies and run the dashboard in one click. |
+| **`.gitignore`** | Configures Git to ignore temporary files, virtual environments, and system caches. |
+| **`README.md`** | Central guide containing project background, features, setup, and key findings. |
 
-Original IPL ball-by-ball dataset used for the project.
+---
 
-**`IPL_Ball_by_Ball_IBM_Project.ipynb`**
+## 📊 Dashboard Key Metrics (KPIs)
 
-Complete Python notebook containing:
+The dashboard computes and displays the following core metrics across all 577 matches:
 
--   Data loading
--   Data cleaning
--   Feature engineering
--   Exploratory analysis
--   KPI calculations
--   Team analysis
--   Player analysis
--   Bowling analysis
--   Visualization
--   Dashboard generation code
+| Metric | Total Count | Analytical Significance |
+|---|---|---|
+| 🏟️ **Matches** | **577** | Total individual match records processed |
+| 📊 **Total Runs** | **173,965** | Aggregate runs scored across all matches |
+| 🎯 **Wickets** | **5,532** | Total recorded bowler dismissals and outs |
+| 4️⃣ **Fours** | **15,413** | Total boundary fours struck |
+| 6️⃣ **Sixes** | **5,813** | Total maximum sixes struck |
+| ⚫ **Dot Balls** | **49,915** | Non-scoring deliveries bowled |
 
-**`app.py`**
+---
 
-Streamlit application containing the interactive dashboard.
+## 📈 Dashboard Features & Analytics
 
-**`IPL_IBM_Project_Report_Exact_Dashboard_Screenshots.docx`**
+1. **Dynamic Sidebar Filters:** Filter instantly by Batting Team ID and Innings ID. All metrics, charts, and tables update in real time.
+2. **Team Performance Overview:** Dual comparison of total runs accumulated versus overall team run rates.
+3. **Top Batting Performers:** Identifies the top 15 batsmen (Striker IDs) with total runs, balls faced, strike rates, and boundary counts.
+4. **Bowling Performance:** Ranks leading wicket-takers and displays economy rates for bowlers meeting the qualification threshold (60+ deliveries).
+5. **Over-by-Over Scoring Trends:** Spline-smoothed run-rate trend line highlighting powerplay, middle, and death overs scoring intensity.
+6. **Extras & Dismissal Breakdown:** Donut chart illustrating extras distribution (wides, no-balls, leg byes) and bar breakdown of dismissal modes.
+7. **Innings Score Distribution:** Histogram displaying frequency of final team totals per innings.
+8. **Filtered Data Table & CSV Export:** Searchable delivery-level data table with a dedicated button to export filtered subsets.
 
-Professional project report containing project documentation and the
-exact dashboard screenshots.
+---
 
-**`README.md`**
+## 🛠️ Technology Stack
 
-Project documentation and setup instructions.
+| Technology | Role |
+|---|---|
+| **Python** | Core analytical programming language |
+| **Streamlit** | Modern web application framework for interactive analytics |
+| **Pandas** | Data cleaning, manipulation, transformation, and aggregations |
+| **NumPy** | High-performance vectorized numerical operations |
+| **Plotly Express & Graph Objects** | Interactive, publication-ready data visualizations |
+| **Jupyter Notebook** | Exploratory data analysis, validation, and documentation |
 
-------------------------------------------------------------------------
+---
 
-## 🚀 Installation
+## 🚀 Quick Setup & Installation
 
-### Step 1 --- Clone or download the project
+### Option 1: One-Click Launch (Windows)
+Double-click **`run.bat`** in the project folder. It will automatically install requirements and launch the dashboard in your default browser.
 
-Place all project files in the same folder.
+---
 
-### Step 2 --- Install Python
+### Option 2: Manual Setup
 
-Python 3.9 or later is recommended.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/HarshPatil0804/IPL_Ball_by_Ball_IBM_Project.git
+   cd IPL_Ball_by_Ball_IBM_Project
+   ```
 
-### Step 3 --- Install required libraries
+2. **Install required dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Open a terminal in the project folder and run:
+3. **Launch the Streamlit Dashboard:**
+   ```bash
+   streamlit run app.py
+   ```
 
-``` bash
-pip install pandas numpy matplotlib plotly streamlit jupyter
+4. **Access the Application:**
+   Open your browser and navigate to:
+   ```text
+   http://localhost:8501
+   ```
+
+---
+
+## ▶️ Running the Jupyter Notebook
+
+To explore the raw data analysis and code development step-by-step:
+
+```bash
+jupyter notebook IPL_Ball_by_Ball_IBM_Project.ipynb
 ```
 
-------------------------------------------------------------------------
+---
 
-## ▶️ Run the Jupyter Notebook
+## 🔎 Data Processing Logic
 
-Start Jupyter Notebook:
+- **Total Runs:** `Total_Runs = Batsman_Scored + Extra_Runs`
+- **Dot Ball Definition:** `Batsman_Scored == 0` and `Extra_Runs == 0`
+- **Boundary Detection:** `Is_Four = Batsman_Scored == 4` and `Is_Six = Batsman_Scored == 6`
+- **Wickets:** Filtered where `Dissimal_Type != 'None'`
+- **Run Rate Calculation:** $\text{Run Rate} = \frac{\text{Runs}}{\text{Balls}} \times 6$
+- **Batting Strike Rate:** $\text{Strike Rate} = \frac{\text{Runs}}{\text{Balls Faced}} \times 100$
 
-``` bash
-jupyter notebook
-```
+---
 
-Open:
+## 👨‍💻 Author
 
-``` text
-IPL_Ball_by_Ball_IBM_Project.ipynb
-```
-
-Run the cells sequentially.
-
-------------------------------------------------------------------------
-
-## 🌐 Run the Streamlit Dashboard
-
-Make sure `Ball_by_Ball.csv` and `app.py` are in the same folder.
-
-Run:
-
-``` bash
-streamlit run app.py
-```
-
-Streamlit will provide a local URL similar to:
-
-``` text
-http://localhost:8501
-```
-
-Open that URL in your browser.
-
-------------------------------------------------------------------------
-
-## 🔎 Data Processing
-
-The project creates several analytical features from the raw columns.
-
-### Total Runs
-
-``` text
-Total_Runs = Batsman_Scored + Extra_Runs
-```
-
-### Dot Ball
-
-A delivery is treated as a dot ball when:
-
-``` text
-Batsman_Scored = 0
-AND
-Extra_Runs = 0
-```
-
-### Four
-
-``` text
-Batsman_Scored = 4
-```
-
-### Six
-
-``` text
-Batsman_Scored = 6
-```
-
-### Wicket
-
-A delivery is treated as a recorded wicket when the dismissal type is
-not empty/`None`.
-
-### Run Rate
-
-The dashboard calculates run rate approximately as:
-
-``` text
-Run Rate = Runs / Balls × 6
-```
-
-------------------------------------------------------------------------
-
-## 📊 Key Findings
-
-Based on the dashboard:
-
--   The dataset contains **577 matches**.
--   The dashboard reports **173,965 total runs**.
--   **5,532 wickets** are recorded.
--   The dataset contains **15,413 fours**.
--   The dataset contains **5,813 sixes**.
--   The dashboard reports **49,915 dot balls**.
--   Team performance varies considerably across team IDs.
--   The batting dashboard highlights major differences in aggregate runs
-    among striker IDs.
--   Bowling performance is presented through both wicket totals and
-    economy.
--   The scoring trend generally increases toward the later overs in the
-    displayed aggregate analysis.
--   Wides and leg byes represent major portions of the displayed extras
-    distribution.
--   Caught dismissals form the largest displayed dismissal category.
-
-------------------------------------------------------------------------
-
-## 💡 Future Improvements
-
-The project can be extended with:
-
--   Verified player-name mapping
--   Verified team-name mapping
--   Season-wise analysis
--   Venue analysis
--   Toss analysis
--   Match-result analysis
--   Player ranking systems
--   Powerplay / middle-over / death-over analysis
--   Player clustering
--   Predictive analytics
--   Match outcome prediction
--   Win-probability modeling
--   Advanced Power BI integration
--   Deployment to Streamlit Cloud or another hosting platform
-
-------------------------------------------------------------------------
-
-## ⚠️ Limitations
-
-1.  The dataset contains numeric player/team IDs rather than names.
-2.  The analysis does not infer names from external sources.
-3.  The available columns limit some advanced cricket analytics.
-4.  Match-result and season-level analysis requires the corresponding
-    fields or verified supplementary datasets.
-5.  The dashboard is primarily descriptive and does not currently
-    perform predictive modeling.
-
-------------------------------------------------------------------------
-
-## 📄 Project Report
-
-The detailed project report contains:
-
--   Executive summary
--   Project objectives
--   Dataset description
--   Methodology
--   KPI summary
--   Analytical findings
--   Dashboard features
--   Technical stack
--   Limitations
--   Future scope
--   Conclusion
--   Exact screenshots of the completed dashboard
-
-------------------------------------------------------------------------
-
-## 👨‍💻 Project
-
-**Project Title:** IPL Ball-by-Ball Data Analysis and Interactive
-Dashboard
-
-**Project Type:** Data Analytics / Python / Dashboard
-
-**Purpose:** IBM Internship Project Submission
-
-------------------------------------------------------------------------
-
-## ⭐ Conclusion
-
-This project demonstrates an end-to-end data analytics workflow using
-Python and IPL ball-by-ball data. It combines data preprocessing,
-feature engineering, exploratory data analysis, aggregation,
-visualization, and interactive dashboard development.
-
-The final solution provides a practical analytical interface for
-exploring team, batting, bowling, scoring, extras, dismissal, and
-innings-level patterns from the underlying dataset.
+**Harshavardhan Patil**  
+- **Project Title:** IPL Ball-by-Ball Data Analysis & Interactive Dashboard  
+- **Context:** IBM Internship Data Analytics Project  
+- **Repository:** [HarshPatil0804/IPL_Ball_by_Ball_IBM_Project](https://github.com/HarshPatil0804/IPL_Ball_by_Ball_IBM_Project)
